@@ -1,0 +1,956 @@
+ul,ol{list-style:none}
+h1,h2,h3,h4,h5,h6,pre,code{font-size:1em;}
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset{
+margin:0;padding:0;line-height:1; list-style:none;}
+a img,:link img,:visited img, fieldset{border:none;}
+input[type=submit], input[type=reset], input[type=button] { *filter:chroma(color=#000000); }
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #e2e2e2;
+}
+::-webkit-scrollbar-thumb {
+  background: #494949;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(41, 41, 41);
+}
+
+
+
+.imgLogo{
+  width: 130px;
+  height: 50px;
+  margin-left: 2%;
+  padding-right: 5%;
+  float: left;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: bold;
+}
+
+#buscador{
+  outline: none;
+  overflow: hidden;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 14px;
+  width: 35%;
+  border-top: 1px solid #181818;
+  border-left: 1px solid #181818;
+  border-right: 1px solid #181818;
+  border-bottom: 1px solid white;
+  font-size: 100%;
+  background-color: transparent;
+  color: white;
+  padding-left: 1%;
+  float: left;
+  margin-left: 10%;
+}
+
+#closeBuscador{
+  outline: none;
+  overflow: hidden;
+  font-family: Poppins;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 14px;
+  width: 3%;
+  font-size: 115%;  
+  border-top: 1px solid #181818;
+  border-left: 1px solid #181818;
+  border-right: 1px solid #181818;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  margin-left: -1px;
+  float: left;
+  color: white;
+}
+
+.divBuscar{
+  display: none;
+  background-color: #181818;
+  width: 100%; 
+  float: left;
+  position: sticky;
+  z-index: 100;
+  min-height: 800px;
+}
+#closeBuscarLi{
+  color: white;
+  background-color:  rgb(163, 11, 11);
+  padding: 10px;
+  font-size: 150%;
+  text-align: center;
+}
+
+#buscador:focus + .divBuscar{
+  display: none;
+}
+
+.llistaBuscar li a {
+  padding: 12px;
+  text-decoration: none;
+  color: white;
+  background-color: #181818;
+  float: none;
+  text-align: center;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+}
+.llistaBuscar li a:hover{
+  background-color: #2e2e2e;
+  color: rgb(255, 255, 255);
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #181818;
+  background-blend-mode: screen;
+  font-family: Poppins ExtraLight;
+  transition: 2s ease; 
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  font-size: 115%;
+  opacity: 20;
+  height: 22px;
+  transition: .2s ease;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 200;
+}
+
+.topnav a:hover {
+  background-color: #363636;
+  color: white;
+}
+.subDiscover{
+  float: none;
+  display: none;
+  color: black;
+}
+.topnav a.active{
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  padding-top: 10px;
+  height: 32px;
+  font-size: 160%;
+  line-height: 80%;
+  color: white;
+  text-align: left;
+}
+
+.topnav a.active:hover {
+  background-color: transparent;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+#lineMenu{
+  float: right;
+  color: black;
+  font-size: 200%;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    width: 10%;
+    text-align: center;
+  }
+
+  #tittleLogo{
+    display: none;
+  }
+
+  #lineMenu{
+    display: none;
+  }
+
+  .topnav a.active{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    float: left;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 10%;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .topnav a.active {
+    text-align: left;
+  }
+  #buscador{
+    float: left;
+    width: 85%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding-left: 5%;
+  }
+}
+
+
+#divIntro{
+  width: 100%;
+  height: 550px;
+  background-image: url(./img/droneBack.jpg);
+  background-size: 120%;
+  background-position-y: 50%;
+  background-position-x: 0;
+  background-attachment: fixed;
+}
+.divIntroAnimation{
+  animation: forwards 4s textAnimation;
+  animation-fill-mode: forwards;
+  z-index: -50;
+}
+
+@keyframes textAnimation {
+  0% { transform: translate3d(0, 100%, 0); opacity: 0;}
+  100% { transform: translate3d(0, 0, 0); opacity: 1;}
+}
+
+#tittleIntro{
+  color: white;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  margin-bottom: 20px;
+  line-height: 120%;
+  padding-top: 4%;
+  margin-left: 8%;
+  opacity: 1;
+  overflow: hidden;
+}
+
+#subTittleIntro{
+  margin-left: 8%;
+  width: 50%;
+  margin-right: 25%;
+  color: white;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 120%;
+}
+
+#buttonDiscover{
+  width: 25%;
+  height: 30px;
+  background-color: transparent;
+  border: solid 2px white;
+  color: white;
+  text-align: center;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  font-size: 130%;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  margin-left: 8%;
+  margin-top: 5%;
+  transition: .2s ease;
+}
+
+#buttonDiscover:hover{
+  background-color: white;
+  color: black;
+}
+
+
+
+#WhoAre1{
+  width: 90%;
+  height: 450px;
+  padding-left: 10%;
+  top: 0;
+  background-color:white;
+  float: left;
+}
+
+#WhoAre2{
+  width: 100%;
+  height: 500px;
+  background-size: 100%;
+  float: left;
+  background-color: white;
+  background-image: url(./img/norway-4013445_1920.jpg);
+  background-attachment: fixed;
+  background-position-y: 50%;
+}
+
+#tittleWhoAre{
+  color: #181818;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  font-size: 200%;
+  width: 80%;
+  padding-top: 8%;
+}
+
+#linea{
+  border-width: 0.5px;
+}
+
+#textWhoAre{ 
+  margin-top: 2%;
+  color: #181818;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  font-size: 120%;
+  width: 85%;
+  line-height: 130%;
+}
+
+#buttonWhoAre{
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  margin-top: 5%;
+  font-size: 110%;
+  color: black;
+  background-color: white;
+  border: solid 1px black;
+  width: 28%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: .5s ease;
+  padding-left: 2%;
+}
+
+#buttonWhoAre:hover{
+  background-color: black;
+  color: white;
+}
+
+
+#types{
+  float: left;
+  background-color: #f1f1f1;
+}
+
+.fpvDrones{
+  width: 100%;
+  height: 600px;
+  margin-top: 6%;
+  margin-bottom: 5%;
+  background-image: url(./img/fpvDroneBack2.jpg);
+  background-size: 100%;
+  background-position-x: 0;
+  background-position-y: 50%;
+  background-attachment: fixed;
+  text-align: center;
+}
+.tittleFpv{
+  color: white;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  font-size: 250%;
+  padding-top: 5%;
+  text-align: center;
+  animation: forwards 2s textAnimation;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+.textFpv{
+  color: white;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  font-size: 110%;
+  padding-top: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
+  line-height: 130%;
+  text-align: center;
+}
+#buttonFpv{
+  color: white;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  font-size: 130%;
+  margin-top: 6%;
+  margin-left: 40%;
+  border: 2px solid white;
+  padding: 15px;
+  width: 20%;
+  transition: ease-out 0.5s;
+}
+#buttonFpv:hover{
+  color: black;
+  background-color: white;
+}
+
+.photoDrones{
+  width: 100%;
+  height: 600px;
+  margin-bottom: 5%;
+  background-image: url(./img/diana-macesanu-3ciHxbx9H0U-unsplash.jpg);
+  background-size: 150%;
+  background-position-x: 50%;
+  background-position-y: 0;
+  background-attachment: fixed; 
+  text-align: center;
+}
+
+.proDrones{
+  width: 100%;
+  height: 600px;
+  margin-bottom: 5%;
+  background-image: url(./img/droneProYes.jpg);
+  background-size: 100%;
+  background-position-x: 0;
+  background-position-y: 100%;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+
+#divWays{
+  background-color: white;
+  width: 100%;
+  height: 500px;
+  float: left;
+}
+
+#tittleWays{
+  color: black;
+  text-align: center;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  font-size: 250%;
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+
+#lineaWays{
+  width: 80%;
+  border-width: 0.01%;
+  margin-left: 10%;
+}
+
+#textWays{
+  text-align: center;
+  padding-right: 15%;
+  padding-left: 15%;
+  margin-top: 2%;
+  color: black;
+  font-size: 120%;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+}
+
+#buttonWays{
+  width: 15%;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border: solid 1px black;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  font-size: 135%;
+  margin-left: 42.5%;
+  text-align: center;
+  margin-top: 5%;
+  transition: .5s ease;
+  opacity: 0.9;
+  color: black;
+  background-color: white;
+}
+#buttonWays:hover{
+  opacity: 1;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+#fotoWays{
+  width: 100%;
+  height: 500px;
+  float: left;
+  background-image: url(./img/buildings-1868716_1920.jpg);
+  background-size: 100%;
+  background-position-x: 0;
+  background-position-y: 100%;
+  background-attachment: fixed;
+}
+
+
+#divOthers{
+  width: 100%;
+  height: 600px;
+}
+#divTutorials{
+  width: 25%;
+  margin-left: 8%;
+  margin-right: 4%;
+  float: left;
+  height: 500px;
+  margin-top: 10%;
+  text-align: center;
+}
+#divBuilds{
+  width: 25%;
+  margin-right: 4%;
+  float: left;
+  height: 500px;
+  margin-top: 10%;
+  text-align: center;
+}
+#divEvents{
+  width: 25%;
+  float: left;
+  height: 500px;
+  margin-top: 10%;
+  text-align: center;
+}
+#imgOthers1{
+  width: 100%;
+  height: 300px;
+  background-image: url(./img/dose-media-DiTiYQx0mh4-unsplash.jpg);
+  background-size: 150%;
+  background-position-y: 50%;
+  background-position-x: 50%;
+}
+#imgOthers2{
+  width: 100%;
+  height: 300px;
+  background-image: url(./img/thisisengineering-raeng-Q-UJHElsKOc-unsplash.jpg);
+  background-size: 150%;
+  background-position-y: 50%;
+}
+#imgOthers3{
+  width: 100%;
+  height: 300px;
+  background-image: url(./img/akin-cakiner-0uPINpvklnc-unsplash.jpg);
+  background-size: 200%;
+  background-position-y: 50%;
+  background-position-x: 50%;
+}
+#tittleOthers{
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  font-size: 220%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#textOthers{
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 110%;
+  color: black;
+  margin-bottom: 5%;
+}
+#buttonOthers{
+  color: black;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  border: solid 1px black;
+  text-align: center;
+  width: 70%;
+  margin-left: 13%;
+  margin-right: 15%;
+  padding: 10px;
+  background-color: white;
+  transition: .5s ease;
+  margin-top: 10%;
+}
+#buttonOthers:hover{
+  color: white;
+  background-color: black;
+}
+
+#phoneInfo{
+  width: 100%;
+  height: 550px;
+  float: left;
+}
+#tittlePhone{
+  color: black;
+  text-align: center;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  font-size: 250%;
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+#lineaPhone{
+  width: 80%;
+  border-width: 0.01%;
+  margin-left: 10%;
+}
+#textPhone{
+  text-align: center;
+  line-height: 140%;
+  padding-right: 15%;
+  padding-left: 15%;
+  margin-top: 2%;
+  color: black;
+  font-size: 120%;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+}
+#imgPhone{
+  width: 100%;
+  height: 400px;
+  float: left;
+  background-image: url(./img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
+  background-size: 100%;
+  margin-bottom: 5%;
+}
+#buttonCode1{
+  float: left;
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  width: 20%;
+  margin-left: 20%;
+  border: 2px solid black;
+  text-align: center;
+  padding: 15px;
+  margin-top: 6%;
+  background-color: black;
+  transition: ease 0.5s;
+}
+#buttonCode2{
+  float: left;
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 800;
+  width: 20%;
+  margin-left: 20%;
+  border: 2px solid black;
+  text-align: center;
+  padding: 15px;
+  margin-top: 6%;
+  background-color: black;
+  transition: ease 0.5s;
+}
+
+#buttonCode1:hover{
+  color: black;
+  background-color: white;
+}
+#buttonCode2:hover{
+  color: black;
+  background-color: white;
+}
+
+#footer{
+  width: 100%;
+  height: 350px;
+  background-color: rgb(107, 107, 107);
+  float: left;
+}
+#footer1{
+  width: 30%;
+  float: left;
+  background-color: black;
+  height: 350px;
+}
+#footer2{
+  width: 40%;
+  float: left;
+  background-color: black;
+  height: 350px;
+}
+#footer3{
+  width: 26%;
+  height: 320px;
+  float: left;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 200;
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#textIn{
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  font-size: 80%;
+  color: white; 
+  margin-left: 5%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+#buttonIn{
+  color: white;
+  background-color: transparent;
+  border: solid 1px white;
+  width: 90%;
+  padding: 10px;
+  outline: none;
+  margin-left: 5%;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#buttonIn:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+#footMenu{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+  float: white;
+  margin-left: 40%;
+}
+
+#aboutFoot{
+  width: 50%;
+  margin-left: 40%;
+  color: white;
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: 800px) {
+  #buscador{
+    width: 85%;
+    padding-left: 0;
+    margin-left: 5%;
+    padding-left: 5%;
+  }
+  #closeBuscador{
+    display: none;
+  }
+    
+  .divBuscar{
+    position: sticky;
+  }
+
+  #divIntro{
+    height: 580px;
+    background-size: 400%;
+    background-position-x: 40%;
+    background-position-y: 0;
+    background-attachment: fixed;
+  }
+  
+  #tittleIntro{
+    font-size: 42px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+  #buttonDiscover{
+    width: 35%;
+  }
+
+  #WhoAre1{
+    width: 90%;
+    height: 570px;
+    padding-left: 10%;
+    margin-left: 0;
+    margin-top: 10%;
+  }
+  #tittleWhoAre{
+    margin-top: 0;
+  }
+
+  #WhoAre2{
+    width: 100%;
+    height: 350px;
+    background-size: 150%;
+    margin-top: 30%;
+    background-position-x: 50%;
+    background-attachment: scroll;
+  }
+  #imgWhoAre{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 0;
+  }
+  #buttonWhoAre{
+    width: 40%;
+  }
+
+  #linea{
+    margin-left: 10%;
+    width: 55%;
+
+  }
+
+
+  #divCont{
+    height: 1900px;
+    margin-top: 5%;
+  }
+
+  #subTittleCont{
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  
+  
+.fpvDrones{
+  height: 750px;
+  margin-bottom: 10%;
+  background-size: 300%;
+  background-position-x: 50%;
+}
+.tittleFpv{
+  padding-top: 10%;
+}
+.textFpv{
+  padding-top: 6%;
+}
+#buttonFpv{
+  margin-left: 23%;
+  width: 50%;
+  padding-left: 0;
+}
+
+.photoDrones{
+  height: 750px;
+  background-size: 300%;
+  background-position-x: 50%;
+  background-position-y: 0;
+  margin-bottom: 10%;
+}
+
+.proDrones{
+  height: 750px;
+  background-size: 300%;
+  background-position-x: 50%;
+  background-position-y: 100%;
+  margin-bottom: 10%;
+}
+
+  #tittleWays{
+    margin-top: 40%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  #buttonWays{
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
+  }
+  #fotoWays{
+    height: 300px;
+    background-size: 200%;
+    background-position-x: 50%;
+    background-attachment: scroll;
+  }
+
+  #phoneInfo{
+    height: 750px;
+    margin-top: 30%;
+  }
+  #imgPhone{
+    height: 230px;
+  }
+  #buttonCode1{
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 6%;
+  }
+  #buttonCode2{
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+
+
+
+  #footer1{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #footer2{
+    width: 100%;
+    opacity: 1;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #footer3{
+    width: 100%;
+    opacity: 1;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #footMenu{
+    margin-left: 10%;
+  }
+  #aboutFoot{
+    margin-left: 30%;
+  }
+  
+  #divTutorials{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 45%;
+  }
+  #divBuilds{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10%;
+  }
+  #divEvents{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10%;
+  }
+    
+#inOur{
+  width: 80%;
+}
+#inGmail{
+  width: 80%;
+}
+#inName{
+  width: 50%;
+}
+  
+}
+
+
+
+
